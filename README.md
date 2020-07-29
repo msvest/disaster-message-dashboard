@@ -1,10 +1,10 @@
-#Motivation
+# Motivation
 This project features pyhon scripts that run ETL and NLP pipelines in order to create a machine learning model that categorises message into categories for use in natural disasters. This model is then incorporated into a web app that can be used to categorise any message the user inputs.
 
 This project forms part of Udacity's Data Scientist nanodegree program.
 
 
-#Libraries
+# Libraries
 The python scripts require the following libraries:
 * numpy
 * pandas
@@ -22,8 +22,8 @@ The HTML code uses the following libraries:
 * plotly
 
 
-#How to run the project
-##ETL process
+# How to run the project
+## ETL process
 The process_data.py file runs the ETL process that merges and cleans two input datasets.
 
 This file can best be run from a Linux or Mac terminal, and it takes three arguments: filepath to messages dataset, filepath to categories dataset, and filepath for the database that will be created.
@@ -33,7 +33,7 @@ Example:
 
 This creates CategorisedMessages.db database file, with the final data stored as table Messages.
 
-##NLP pipeline and ML model
+## NLP pipeline and ML model
 Once the data has been cleaned, the NLP and ML processes can be run.
 
 This is the train_classifier.py file, and it takes three arguments when run in the terminal: filepath to the database and a filepath for the output model.
@@ -41,11 +41,11 @@ This is the train_classifier.py file, and it takes three arguments when run in t
 Example:
   python train_classifier.py ../data/CategorisedMessages.db classifier.pkl
 
-##Running the web app
+## Running the web app
 Once the model has been created, the web app can be run by running the run.py file in terminal:
   python run.py
 
-#Full list of files
+# Full list of files
 * **app/**
   * **templates/**
     * **master.html**: html file responsible for the majority of the web app.
@@ -61,7 +61,7 @@ Once the model has been created, the web app can be run by running the run.py fi
 
 Note that while the output of process_data.py is provided here (CategorisedMessages.db), the output of train_classifier.py is not, as the resulting pickle file is too large to be stored on GitHub.
 
-#Acknowledgements
+# Acknowledgements
 Thanks to Udacity, who provided the majority of the web app code.
 
 Thanks to Figure Eight, who provided the messages and categories datasets through Udacity.
