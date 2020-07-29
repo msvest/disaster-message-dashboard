@@ -1,5 +1,5 @@
 # Motivation
-This project features pyhon scripts that run ETL and NLP pipelines in order to create a machine learning model that categorises message into categories for use in natural disasters. This model is then incorporated into a web app that can be used to categorise any message the user inputs.
+This project features pyhon scripts that run ETL and NLP pipelines in order to create a machine learning model that categorises message for use in natural disaster response. This model is then incorporated into a web app that can be used to categorise any message the user inputs.
 
 This project forms part of Udacity's Data Scientist nanodegree program.
 
@@ -36,10 +36,12 @@ This creates CategorisedMessages.db database file, with the final data stored as
 ## NLP pipeline and ML model
 Once the data has been cleaned, the NLP and ML processes can be run.
 
-This is the train_classifier.py file, and it takes three arguments when run in the terminal: filepath to the database and a filepath for the output model.
+This is the train_classifier.py file, and it takes two arguments when run in the terminal: filepath to the database and a filepath for the output model.
 
 Example:
   python train_classifier.py ../data/CategorisedMessages.db classifier.pkl
+
+Please note that running the full gridsearch takes a long time. If you want to reduce the amount of time it takes to run, reduce the number of hyperparameters tested. In the code file, the best hyperparameters from my testing are listed in a comment - these can be used as an example.
 
 ## Running the web app
 Once the model has been created, the web app can be run by running the run.py file in terminal:
